@@ -31,4 +31,4 @@ with torch.no_grad():
     print(X.shape)
     print(X.element_size() * X.nelement())
 
-    torch.save(X, 'datasets/ag_news_test_post_gpt')
+    torch.save(X, '../datasets/ag_news_test_post_gpt')
