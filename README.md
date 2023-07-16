@@ -56,6 +56,33 @@ As shown above, results are satisying. In 100 epochs of training we reached an a
 
 ## Exercise 3.2: Training a multiple choice question answering model
 
+Since it worked nicely, the same approach as before was used for this task.
+
+Instead of the GPT Model, for this task BERT from HuggingFace was used.
+
+Now it is enough to run `3_2.py` that includes both the preprocessing and the training part.
+
+### Dataset preprocessing
+
+Each entry in the dataset is composed of 6 text fields:
+- the context (called "article")
+- the question
+- four answers
+
+The idea was to train a model capable of selecting the correct answer within the four.
+We decided to represent each answer with a vector as before that also cotains information from the context and the question.
+
+To create the embeddings of the four answers we followed these steps:
+1. using BERT we retrieved the [CLS] token's embedding of the context, the question and the answers
+2. each answer is then represented by the average of its embedding and context's and article's embeddings
+
+The four embeddings are then put in a tensor that represents the whole dataset in this way: first the correct one and then the other three.
+
+Each entry of Race is processed to create the train, the validation and the test dataset.
+
+
+### Training and evaluation
+
 
 
 
