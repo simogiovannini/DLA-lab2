@@ -24,7 +24,11 @@ Links to the datasets used for the following exercises.
 [Race](https://huggingface.co/datasets/race) was used.
 
 
-## Exercise 1.1: Comparing Architectures
+## Utils
+In the utils directory there are two classes named "wrappers", we use them later only to access easily to the items in the datasets downloaded from HuggingFace.
+
+
+## Exercise 1.1: Text Classifier
 
 `1_1.py` contains a comparison between four architectures on CIFAR10:
 - MultiLayerPerceptron
@@ -45,19 +49,20 @@ There is no particular difference between ResNet34 and ResNet50.
 At the end of the training each model was saved in `trained_models/`.
 
 
-## Exercise 2.1: ResNet34 vs ConvNet34
+## Exercise 2.1: Training a text classifier
+Before executing `3_1.py` the user must run `utils/dataset_synthetizer` to create the custom dataset to be used for this task.
 
-From the last comparison it's clear how ResNet34 offers better performance than ConvNet34 and, thanks to our implementation, the only difference between them is the presence or not of skip connections.
+### Dataset synthetization
+In this script we downlaod the dataset from HuggingFace and then we process it through the GPT Model trained by HuggingFace.
 
-![image](https://github.com/simogiovannini/DLA-lab1/assets/53260220/eba0393b-79ad-45cd-8d17-a38b76653135)
+Each sentence in the dataset is passed to the GPT Tokenizer and then the result is passed to the GPT Model to retrieve embeddings for each token.
+The embedding of the whole sentence is the average of the embeddings of the tokens within it.
 
-From the previous graph we can see that ResNet34 reaches lower values of loss in a lower number of epochs. So we tried to explain these phenomenon.
+At the end of the iteration each sentence is represented by a tensor or 768 float. All the couples of vectors and labels are stored in a tensor that is saved in the datasets directory.
 
-The first idea was to verify if that happens systematically or whether this difference had been the result of randomness due to a particular split in the data.
+The script must be run two times: one for the train and one for the test split of the ag_news dataset.
 
-We then trained the two models for 20 epochs 10 times and collected information on all training sessions.
-
-After this initial verification, it is possible to say that the skip connections lead to an actual improvement in performance.
+### Training the model
 
 
 ## Exercise 2.3: Class Activation Map
