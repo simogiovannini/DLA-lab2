@@ -1,4 +1,4 @@
-# DLA-lab2  (README work in progress)
+# DLA-lab2
 Deep Learning Applications laboratory on LLMs
 
 ## Models
@@ -54,21 +54,9 @@ The text classifier is trained to classify these 768-sized vectors to their corr
 As shown above, results are satisying. In 100 epochs of training we reached an accuracy of around 87% with apparently no overfitting, according to what the validation loss chart indicates.
 
 
-## Exercise 2.3: Class Activation Map
+## Exercise 3.2: Training a multiple choice question answering model
 
-We implemented Class Activation Map to analyze and explain the predictions of our implementation of CNN. The script loads the model saved by the previous scripts to clasify 16 images random sampled from the test test. The script saves a  `CAMs/pre_image_grid.png` that contains these 16 images.
 
-For each image in the grid, we predict its class using the trained net and then we save an image that contains the class activation maps. Each CAM is saved in the same directory of the grid with the following file name: `CAMs/{ID}-{predicted_class}.png`.
-
-Here we have some examples.
-
-![pre_image_grid](https://github.com/simogiovannini/DLA-lab1/assets/53260220/bda6c940-6326-4394-8a1e-e88d6fe94105)
-
-![1-bird](https://github.com/simogiovannini/DLA-lab1/assets/53260220/242edd81-f480-4088-8c1f-1abb0969a6e5)
-
-![14-airplane](https://github.com/simogiovannini/DLA-lab1/assets/53260220/25f1a479-c59a-4fe6-883f-6db5c67e53c5)
-
-![15-cat](https://github.com/simogiovannini/DLA-lab1/assets/53260220/700e586d-1425-47cb-9c19-76777b0cf5f8)
 
 
 ## Requirements
