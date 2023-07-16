@@ -28,27 +28,6 @@ Links to the datasets used for the following exercises.
 In the utils directory there are two classes named "wrappers", we use them later only to access easily to the items in the datasets downloaded from HuggingFace.
 
 
-## Exercise 1.1: Text Classifier
-
-`1_1.py` contains a comparison between four architectures on CIFAR10:
-- MultiLayerPerceptron
-- ResNet34
-- ConvNet34 (the same architecture as ResNet34 but without residual connections)
-- ResNet50
-
-Each model was trained for the same number of epochs, using the same train/validation split. Here we analyze the results:
-
-![image](https://github.com/simogiovannini/DLA-lab1/assets/53260220/18ba47e7-1d1c-4084-866e-67e4a9c246fd)
-
-![image](https://github.com/simogiovannini/DLA-lab1/assets/53260220/487c0372-9911-42ab-b0c2-47ab0ba28ee2)
-
-MLP is completely uneffective on this task while all the CNNs share the same behaviour: they work nicely but the rapidly overfit. We can see it from the growth of validation loss over time.
-
-There is no particular difference between ResNet34 and ResNet50.
-
-At the end of the training each model was saved in `trained_models/`.
-
-
 ## Exercise 2.1: Training a text classifier
 Before executing `3_1.py` the user must run `utils/dataset_synthetizer` to create the custom dataset to be used for this task.
 
@@ -63,6 +42,16 @@ At the end of the iteration each sentence is represented by a tensor or 768 floa
 The script must be run two times: one for the train and one for the test split of the ag_news dataset.
 
 ### Training the model
+
+Now the user can run `3_1.py`.
+
+The two tensors created before are now used as training and testing datasets.
+
+The text classifier is trained to classify these 768-sized vectors to their correct class of beloning.
+
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/3633b782-fdcc-4d90-9fd2-1439877c9a57)
+
+As shown above, results are satisying. In 100 epochs of training we reached an accuracy of around 87% with apparently no overfitting, according to what the validation loss chart indicates.
 
 
 ## Exercise 2.3: Class Activation Map
