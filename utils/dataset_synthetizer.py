@@ -7,7 +7,7 @@ from utils.ag_wrapper import AGWrapper
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 dataset = load_dataset("ag_news")
-train_dataset = AGWrapper(dataset['test'])
+train_dataset = AGWrapper(dataset['train'])
 
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 gpt_model = GPT2Model.from_pretrained('gpt2')
@@ -31,4 +31,4 @@ with torch.no_grad():
     print(X.shape)
     print(X.element_size() * X.nelement())
 
-    torch.save(X, '../datasets/ag_news_test_post_gpt')
+    torch.save(X, '../datasets/ag_news_train_post_gpt')
