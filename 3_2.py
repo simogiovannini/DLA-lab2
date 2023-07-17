@@ -24,7 +24,6 @@ def compute_accuracy(logits):
         m = max(logits[i].item(), logits[i + 1].item(), logits[i + 2].item(), logits[i + 3].item())
         if math.isclose(m, logits[i].item()):
             correct_count += 1
-        break
     return correct_count * 100 / (len(logits)/4)
 
 
@@ -153,10 +152,10 @@ ranker = RankingPredictor(input_shape=768, hidden_units_1=512, hidden_units_2=25
 ranker.to(device)
 
 batch_size = 128
-num_epochs = 100
-lr = 0.01
+num_epochs = 5
+lr = 0.1
 
-loss_fn = nn.MarginRankingLoss()
+loss_fn = nn.MarginRankingLoss(margin=1)
 # loss_fn = CustomLoss()
 optimizer = torch.optim.SGD(ranker.parameters(), lr=lr)
 
@@ -186,7 +185,6 @@ for epoch in tqdm(range(num_epochs)):
         X, _ = compute_features(train_dataset, batch_size, n_train_samples, i, device)
 
         y_logits = ranker(X).to(device)
-
         loss = compute_loss(loss_fn, y_logits, device)
         train_loss += loss
 
