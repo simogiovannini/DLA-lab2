@@ -86,7 +86,7 @@ def get_cls_embedding(model, tokenizer, text):
 
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-writer = SummaryWriter('runs/exercise-3_2')
+writer = SummaryWriter('runs/exercise-3_2-mr-loss')
 
 
 path = 'datasets/race_embedded_train'
@@ -152,7 +152,7 @@ ranker = RankingPredictor(input_shape=768, hidden_units_1=512, hidden_units_2=25
 ranker.to(device)
 
 batch_size = 128
-num_epochs = 5
+num_epochs = 500
 lr = 0.1
 
 loss_fn = nn.MarginRankingLoss(margin=1)
@@ -178,10 +178,8 @@ for epoch in tqdm(range(num_epochs)):
     ### Training
     train_loss = 0
     for i in range(n_train_batches):
-        # print(f'Epoch: {epoch} ------- {i + 1}/{n_train_batches} batches')
 
         ranker.train()
-
         X, _ = compute_features(train_dataset, batch_size, n_train_samples, i, device)
 
         y_logits = ranker(X).to(device)

@@ -8,7 +8,7 @@ from tqdm.auto import tqdm
 
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-writer = SummaryWriter('runs/exercise-3_2')
+writer = SummaryWriter('runs/exercise-3_1')
 
 dataset = load_dataset('ag_news')
 
