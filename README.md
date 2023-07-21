@@ -83,6 +83,16 @@ Each entry of Race is processed to create the train, the validation and the test
 
 ### Training and evaluation
 
+The learning process was done by selecting Margin Ranking Loss as a metric provided bt pyTorch.
+For each question the following was done:
+1. the score for each of the 4 responses is calculated, providing as input the vector representing them;
+2. the loss is calculated 3 times, comparing the score of the correct answer with that of the three incorrect ones.
+
+The idea is to push the model to predict higher correct answer scores while keeping incorrect answer scores low.
+
+To penalize similar scores, the `margin` parameter was set equal to 1 (arbitrary choice not based on particular information).
+The results obtained by training the model for 100 epochs are here reported:
+
 
 
 
