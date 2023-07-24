@@ -99,6 +99,10 @@ The results obtained by training the model for 100 epochs are here reported:
 
 ![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/b000979d-38ee-48b1-9822-97e3d0510a08)
 
+it can be seen that the technique used does not work very well. around 250 epochs we begin to detect a marked overfitting phenomenon as the loss calculated on the validation set begins to increase while the training loss continues to decrease.
+
+The maximum accuracy obtained is about 38 percent, so you have a model that is not able to be used effectively.
+
 ![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/55c3bcf7-c0ea-4dc7-aeaf-124cee44e527)
 
 ![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/9421096c-1118-487e-9534-70e20c740b12)
