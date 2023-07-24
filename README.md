@@ -119,5 +119,19 @@ The results obtained are now shown.
 
 it can be seen that the attempt was more unsuccessful than the previous one in that, at 500 epochs, only a very slight decrease in the loss function is noted and that the accuracy still stands at 26 percent, which is totally equivalent to choosing an answer randomly. The model trained in this way is completely ineffective.
 
+## Extra: training a GPT Model on 'La Divina Commedia'
+
+By slightly modifying the code in this repository, a small version of GPT was trained using the text of Dante's Inferno from the Divine Comedy.
+
+The code was launched by setting the following values for the parameters determining the architecture:
+
+- `max_iters = 5000`
+- `learning_rate = 3e-4`
+- `n_head = 6`
+- `n_layer = 6`
+
+The said model thus has about 10 million parameters, and the training and validation loss trend in addition to text generated through the trained model are shown below.
+
+
 ## Requirements
 You can use the `requirements.txt` file to create the conda environment to run the code in this repository.
