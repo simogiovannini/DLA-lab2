@@ -93,7 +93,15 @@ The idea is to push the model to predict higher correct answer scores while keep
 To penalize similar scores, the `margin` parameter was set equal to 1 (arbitrary choice not based on particular information).
 The results obtained by training the model for 100 epochs are here reported:
 
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/1e57861e-325d-49dd-9128-aa30269863cf)
 
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/255068d9-435d-4ffd-9f79-3d4d35f53210)
+
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/b000979d-38ee-48b1-9822-97e3d0510a08)
+
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/55c3bcf7-c0ea-4dc7-aeaf-124cee44e527)
+
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/9421096c-1118-487e-9534-70e20c740b12)
 
 
 ## Requirements
