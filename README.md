@@ -103,6 +103,16 @@ it can be seen that the technique used does not work very well. around 250 epoch
 
 The maximum accuracy obtained is about 38 percent, so you have a model that is not able to be used effectively.
 
+In order to make another attempt, a new loss function implemented on the basis of intuition was tried.
+
+Given the estimated scores for the four answers the loss is calculated as the sum of the three ratios of the score of the correct answer to each of the score of the wrong answers.
+
+The idea was to push the model more to create more discrepancy between the correct answer and the other three.
+
+A run was run with this new loss (in pink) and an additional one going to increase the learning rate (in orange), as the loss had a significantly higher magnitude than the one previously used.
+
+The results obtained are now shown.
+
 ![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/55c3bcf7-c0ea-4dc7-aeaf-124cee44e527)
 
 ![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/9421096c-1118-487e-9534-70e20c740b12)
