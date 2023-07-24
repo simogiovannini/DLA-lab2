@@ -117,6 +117,7 @@ The results obtained are now shown.
 
 ![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/9421096c-1118-487e-9534-70e20c740b12)
 
+it can be seen that the attempt was more unsuccessful than the previous one in that, at 500 epochs, only a very slight decrease in the loss function is noted and that the accuracy still stands at 26 percent, which is totally equivalent to choosing an answer randomly. The model trained in this way is completely ineffective.
 
 ## Requirements
 You can use the `requirements.txt` file to create the conda environment to run the code in this repository.
