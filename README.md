@@ -132,6 +132,24 @@ The code was launched by setting the following values for the parameters determi
 
 The said model thus has about 10 million parameters, and the training and validation loss trend in addition to text generated through the trained model are shown below.
 
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/6efc86c7-3dc5-4586-8d09-b1e04e9b618e)
+
+![image](https://github.com/simogiovannini/DLA-lab2/assets/53260220/5ddca491-b866-4412-b758-e3a4f0526ffb)
+
+Given the size of the model and the size of the dataset, after 1500 epochs the model begins to overfit.
+
+The text generated first from a model trained for 5000 epochs and then one trained for 1500 is then shown.
+
+`piuavvien si che la faccia booru.`
+
+`Taccia Lucria e Ciato Ii con terra che tanta di si capa, andi se' e ne costl pianto manto;`
+
+`e vidi gente per lo capo sotto il viso ch'ebbe aver di si' trapassando ha fatta.`
+
+`E come quella selva runa e 'l ti basso di sotto quel piuche 'n su resto, e ha piuche cocia gia l'univiso le belle a quai le picte sestagne.`
+
+`Le quelle co' il braccio era e 'l petto, e di trieversi' di guale pietra che la pioggia, annima in si sedea quel che so'`
+
 
 ## Requirements
 You can use the `requirements.txt` file to create the conda environment to run the code in this repository.
