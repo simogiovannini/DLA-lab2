@@ -121,7 +121,7 @@ it can be seen that the attempt was more unsuccessful than the previous one in t
 
 ## Extra: training a GPT Model on 'La Divina Commedia'
 
-By slightly modifying the code in this repository, a small version of GPT was trained using the text of Dante's Inferno from the Divine Comedy.
+By slightly modifying the code in [this repository](https://github.com/karpathy/nanoGPT/blob/master), a small version of GPT was trained using the text of Dante's Inferno from the Divine Comedy.
 
 The code was launched by setting the following values for the parameters determining the architecture:
 
@@ -149,6 +149,22 @@ The text generated first from a model trained for 5000 epochs and then one train
 `E come quella selva runa e 'l ti basso di sotto quel piuche 'n su resto, e ha piuche cocia gia l'univiso le belle a quai le picte sestagne.`
 
 `Le quelle co' il braccio era e 'l petto, e di trieversi' di guale pietra che la pioggia, annima in si sedea quel che so'`
+
+And:
+
+`vegne luol che tene avea di lento per le tre tristo io dolce sangui.`
+
+`E verranno a quello in ciel cerchi che, centro da l'imagine due fiso sanzar carnel non la' testa golte.`
+
+`E che di lungi pieta, guarda elordo lo suo dicentro per lascionche; e s'io nodi piu felici mai.`
+
+`La vendette tu sara conrona, ch'io di trei era simistri, primi era credaro stravi.`
+
+`L'un ho campito inno er' campagno che quel che faccia e avoltte la zingua voglia de l'arte torna, or vede speranno;`
+
+`vidi`
+
+The second model seems better because it contains slightly more full words but in both cases the generated text is not understandable despite being in the style of the text used for learning
 
 
 ## Requirements
