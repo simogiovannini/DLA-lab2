@@ -1,4 +1,4 @@
-# DLA-lab2
+# Comparative Study of LLMs for Text Classification and QA
 Deep Learning Applications laboratory on LLMs
 
 ## Models
